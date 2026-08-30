@@ -8,7 +8,13 @@ void convertIntToRoman()
 {
 	std::cout << "Введіть число: ";
 	int number = 0;
-	std::cin >> number;
+	if (!(std::cin >> number))
+	{
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+		std::cout << "Це не схоже на число. Спробуйте ще раз.\n";
+		return;
+	}
 
 	std::string result = intToRoman(number);
 	if (result.empty())
@@ -37,7 +43,7 @@ void convertRomanToInt()
 void printMenu()
 {
 	std::cout << "\n Конвертер римських чисел \n";
-	std::cout << "1 - число -> римський запис\n";
+	std::cout << "1 - число -> римський запис (потрібне ціле число)\n";
 	std::cout << "2 - римський запис -> число\n";
 	std::cout << "0 - вихід\n";
 	std::cout << "Ваш вибір: ";

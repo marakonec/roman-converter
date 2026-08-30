@@ -78,7 +78,25 @@ std::string intToRoman(int number)
 	return result;
 }
 
+bool isValidRoman(const std::string& text)
+{
+	for (size_t i = 0; i < text.size(); ++i)
+	{
+		if (symbolValue(text[i]) == 0)
+		{
+			return false;
+		}
+	}
+
+	// Запис коректний тоді, коли зворотне перетворення дає той самий рядок.
+	return intToRoman(parseRoman(text)) == text;
+}
+
 int romanToInt(const std::string& text)
 {
+	if (!isValidRoman(text))
+	{
+		return 0;
+	}
 	return parseRoman(text);
 }

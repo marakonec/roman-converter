@@ -9,5 +9,8 @@ const int ROMAN_MAX = 3999;
 // Повертає порожній рядок, якщо число поза діапазоном ROMAN_MIN..ROMAN_MAX.
 std::string intToRoman(int number);
 
+// Перевіряє, чи є рядок коректним римським записом.
+bool isValidRoman(const std::string& text);
+
 // Перетворює римський запис у ціле число.
 int romanToInt(const std::string& text);

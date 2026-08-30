@@ -38,6 +38,12 @@ void convertRomanToInt()
 		text[i] = static_cast<char>(std::toupper(static_cast<unsigned char>(text[i])));
 	}
 
+	if (!isValidRoman(text))
+	{
+		std::cout << termcolor::red << "Це не коректний римський запис.\n" << termcolor::reset;
+		return;
+	}
+
 	std::cout << termcolor::green << text << " = " << romanToInt(text) << "\n" << termcolor::reset;
 }
 

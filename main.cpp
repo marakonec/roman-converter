@@ -4,6 +4,7 @@
 #include "roman.h"
 #include <cctype>
 #include "third_party/termcolor.hpp"
+#include "checks.h"
 
 void convertIntToRoman()
 {
@@ -54,6 +55,7 @@ void printMenu()
 	std::cout << termcolor::reset;
 	std::cout << "1 - число -> римський запис (ціле число від 1 до 3999)\n";
 	std::cout << "2 - римський запис -> число\n";
+	std::cout << "3 - самоперевірка\n";
 	std::cout << "0 - вихід\n";
 	std::cout << "Ваш вибір: ";
 }
@@ -81,6 +83,10 @@ int main()
 		else if (command == "2")
 		{
 			convertRomanToInt();
+		}
+		else if (command == "3")
+		{
+			runChecks();
 		}
 		else
 		{

@@ -139,10 +139,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="checks.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="roman.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="checks.h" />
     <ClInclude Include="roman.h" />
     <ClInclude Include="third_party\termcolor.hpp" />
   </ItemGroup>

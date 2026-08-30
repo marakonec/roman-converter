@@ -144,9 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="roman.h" />
+    <ClInclude Include="third_party\termcolor.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="third_party\termcolor-LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

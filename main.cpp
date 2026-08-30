@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "roman.h"
 #include <cctype>
+#include "third_party/termcolor.hpp"
 
 void convertIntToRoman()
 {
@@ -12,18 +13,18 @@ void convertIntToRoman()
 	{
 		std::cin.clear();
 		std::cin.ignore(10000, '\n');
-		std::cout << "Це не схоже на число. Спробуйте ще раз.\n";
+		std::cout << termcolor::red << "Це не схоже на число. Спробуйте ще раз.\n" << termcolor::reset;
 		return;
 	}
 
 	std::string result = intToRoman(number);
 	if (result.empty())
 	{
-		std::cout << "Число поза діапазоном 1..3999.\n";
+		std::cout << termcolor::red << "Число поза діапазоном 1..3999.\n" << termcolor::reset;
 		return;
 	}
 
-	std::cout << number << " = " << result << "\n";
+	std::cout << termcolor::green << number << " = " << result << "\n" << termcolor::reset;
 }
 
 void convertRomanToInt()
@@ -37,12 +38,14 @@ void convertRomanToInt()
 		text[i] = static_cast<char>(std::toupper(static_cast<unsigned char>(text[i])));
 	}
 
-	std::cout << text << " = " << romanToInt(text) << "\n";
+	std::cout << termcolor::green << text << " = " << romanToInt(text) << "\n" << termcolor::reset;
 }
 
 void printMenu()
 {
+	std::cout << termcolor::cyan;
 	std::cout << "\n Конвертер римських чисел \n";
+	std::cout << termcolor::reset;
 	std::cout << "1 - число -> римський запис (ціле число від 1 до 3999)\n";
 	std::cout << "2 - римський запис -> число\n";
 	std::cout << "0 - вихід\n";

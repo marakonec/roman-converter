@@ -1,6 +1,23 @@
 ﻿#include <iostream>
 #include <string>
 #include <windows.h>
+#include "roman.h"
+
+void convertIntToRoman()
+{
+	std::cout << "Введіть число: ";
+	int number = 0;
+	std::cin >> number;
+
+	std::string result = intToRoman(number);
+	if (result.empty())
+	{
+		std::cout << "Число поза діапазоном 1..3999.\n";
+		return;
+	}
+
+	std::cout << number << " = " << result << "\n";
+}
 
 void printMenu()
 {
@@ -27,7 +44,14 @@ int main()
 		{
 			break;
 		}
-		std::cout << "Цей пункт ще не працює.\n";
+		if (command == "1")
+		{
+			convertIntToRoman();
+		}
+		else
+		{
+			std::cout << "Цей пункт ще не працює.\n";
+		}
 	}
 
 	std::cout << "До побачення.\n";

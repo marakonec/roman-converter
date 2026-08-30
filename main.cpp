@@ -2,6 +2,7 @@
 #include <string>
 #include <windows.h>
 #include "roman.h"
+#include <cctype>
 
 void convertIntToRoman()
 {
@@ -17,6 +18,20 @@ void convertIntToRoman()
 	}
 
 	std::cout << number << " = " << result << "\n";
+}
+
+void convertRomanToInt()
+{
+	std::cout << "Введіть римський запис (наприклад, MCMXCIV): ";
+	std::string text;
+	std::cin >> text;
+
+	for (size_t i = 0; i < text.size(); ++i)
+	{
+		text[i] = static_cast<char>(std::toupper(static_cast<unsigned char>(text[i])));
+	}
+
+	std::cout << text << " = " << romanToInt(text) << "\n";
 }
 
 void printMenu()
@@ -47,6 +62,10 @@ int main()
 		if (command == "1")
 		{
 			convertIntToRoman();
+		}
+		else if (command == "2")
+		{
+			convertRomanToInt();
 		}
 		else
 		{

@@ -17,6 +17,46 @@ namespace
 	};
 
 	const int TABLE_SIZE = 13;
+
+	int symbolValue(char c)
+	{
+		switch (c)
+		{
+		case 'I': return 1;
+		case 'V': return 5;
+		case 'X': return 10;
+		case 'L': return 50;
+		case 'C': return 100;
+		case 'D': return 500;
+		case 'M': return 1000;
+		default:  return 0;
+		}
+	}
+
+	// Якщо цифра менша за наступну — вона віднімається (IV, IX, XL).
+	int parseRoman(const std::string& text)
+	{
+		int total = 0;
+		for (size_t i = 0; i < text.size(); ++i)
+		{
+			int current = symbolValue(text[i]);
+			int next = 0;
+			if (i + 1 < text.size())
+			{
+				next = symbolValue(text[i + 1]);
+			}
+
+			if (current < next)
+			{
+				total -= current;
+			}
+			else
+			{
+				total += current;
+			}
+		}
+		return total;
+	}
 }
 
 std::string intToRoman(int number)
@@ -36,4 +76,9 @@ std::string intToRoman(int number)
 		}
 	}
 	return result;
+}
+
+int romanToInt(const std::string& text)
+{
+	return parseRoman(text);
 }

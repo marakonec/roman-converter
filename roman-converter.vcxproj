@@ -149,6 +149,7 @@
     <ClInclude Include="third_party\termcolor.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CHANGELOG.md" />
     <None Include="README.md" />
     <None Include="АТРИБУЦІЯ.md" />
   </ItemGroup>

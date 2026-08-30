@@ -80,6 +80,11 @@ std::string intToRoman(int number)
 
 bool isValidRoman(const std::string& text)
 {
+	if (text.empty())
+	{
+		return false;
+	}
+
 	for (size_t i = 0; i < text.size(); ++i)
 	{
 		if (symbolValue(text[i]) == 0)

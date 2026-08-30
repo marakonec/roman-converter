@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+    <None Include="АТРИБУЦІЯ.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="third_party\termcolor-LICENSE.txt" />

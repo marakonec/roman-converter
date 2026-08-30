@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Конвертер римських чисел</title>
+<style>
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: Comfortaa, "Segoe UI", Arial, sans-serif;
+    color: #1b1b1b;
+    background: #ffffff;
+    line-height: 1.6;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { color: #125881; font-size: 2rem; margin-bottom: 0.2rem; }
+  .lead { color: #4a4a4a; margin-top: 0; }
+  h2 { color: #125881; font-size: 1.25rem; margin-top: 2rem; }
+  pre {
+    background: #f2f2f2;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: Consolas, "Cascadia Mono", monospace;
+    font-size: 0.95rem;
+  }
+  .buttons { margin: 1.5rem 0; }
+  a.button {
+    display: inline-block;
+    background: #125881;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    margin: 0 0.5rem 0.5rem 0;
+    border-radius: 4px;
+  }
+  a.button.secondary { background: #80b7e0; color: #0d3b5c; }
+  footer { margin-top: 3rem; font-size: 0.9rem; color: #6a6a6a; }
+  a { color: #125881; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Конвертер римських чисел</h1>
+  <p class="lead">Консольна програма для Windows. Перетворює числа
+     від 1 до 3999 у римський запис і навпаки.</p>
+
+  <div class="buttons">
+    <a class="button" href="https://github.com/marakonec/roman-converter/releases/latest">Завантажити v1.0.0</a>
+    <a class="button secondary" href="https://github.com/marakonec/roman-converter">Вихідний код</a>
+  </div>
+
+  <h2>Що вона робить</h2>
+  <ul>
+    <li>перетворює ціле число від 1 до 3999 у римський запис;</li>
+    <li>перетворює римський запис у число;</li>
+    <li>відхиляє некоректні записи на кшталт <code>IIII</code> або <code>ABC</code>;</li>
+    <li>має вбудований режим самоперевірки.</li>
+  </ul>
+
+  <h2>Як це виглядає</h2>
+<pre> Конвертер римських чисел 
+1 - число -&gt; римський запис (ціле число від 1 до 3999)
+2 - римський запис -&gt; число
+3 - самоперевірка
+0 - вихід
+Ваш вибір: 1
+Введіть число: 2026
+2026 = MMXXVI</pre>
+
+  <h2>Як запустити</h2>
+  <p>Завантажте архів, розпакуйте й запустіть
+     <code>roman-converter.exe</code>. Visual Studio не потрібна.</p>
+
+  <footer>
+    Еталонний проєкт курсу "Професійна практика програмної інженерії".
+    Кафедра комп'ютерних інформаційних технологій, УДУНТ.
+    Ліцензія MIT.
+  </footer>
+</main>
+</body>
+</html>

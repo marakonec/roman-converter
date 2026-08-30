@@ -37,7 +37,7 @@ void convertRomanToInt()
 void printMenu()
 {
 	std::cout << "\n Конвертер римських чисел \n";
-	std::cout << "1 - число -> римський запис\n";
+	std::cout << "1 - число -> римський запис (від 1 до 3999)\n";
 	std::cout << "2 - римський запис -> число\n";
 	std::cout << "0 - вихід\n";
 	std::cout << "Ваш вибір: ";
